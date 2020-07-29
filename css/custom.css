@@ -106,9 +106,6 @@ padding-bottom: 30px;
 }
 
 @media only screen and (max-width:700px) {
-body{
-background: black;
-}
 .container {
 grid-template-areas: 
 "header"
@@ -117,6 +114,8 @@ grid-template-areas:
 "footer";
 grid-template-columns: 1fr;
 background-color: white;
+border: 15px black solid;
+border-radius: 10px;
 }
 header {
 grid-area: header;
