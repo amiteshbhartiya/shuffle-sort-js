@@ -1,0 +1,157 @@
+/*Common area*/ 
+body {
+    font-family: Verdana;
+}
+.container {
+display: grid;
+}
+button{
+font-size: 11px;
+text-transform: uppercase;
+font-weight: 500;
+color: #ffff;
+background-color: #72C3DC;
+border: none;
+border-radius: 5px;
+box-shadow: -1px 3px 5px 0px #3f6775;
+transition: all 0.3s ease 0s;
+cursor: pointer;
+}
+footer {
+grid-area: footer;
+font-size: 12px;
+font-style: italic;
+padding-top: 10px;
+text-align: center;
+}
+aside {
+grid-area: sidebar;
+justify-content: center;
+text-align: center;
+display: grid;
+grid-template-rows: 40px;
+grid-template-columns: 1fr 1fr;
+padding: 10px 100px;
+grid-column-gap: .5em;
+}  
+
+@media only screen and (min-width:701px) {
+html {
+font-family: Arial;
+}    
+body {
+width: 90%;
+max-width: 900px;
+margin: 2em auto;
+}
+header,
+footer {
+padding: 5px;        
+display: grid;
+}
+.center{
+justify-content: center;
+}
+article > div{
+padding: 25px;
+background: grey;
+font-size: 80px;
+color: #ffffff;
+display: grid;
+justify-items: center;
+align-items: center;
+}
+article :nth-child(even) {
+background: #2B8EAD;
+}
+article :nth-child(odd) {
+background: #2F454E;
+}
+article :nth-child(7n+1) {
+background: #6F98A8;
+}
+article :nth-child(n+6):nth-child(-n+7) {
+background: #BFBFBF;
+}
+.container {
+grid-template-areas: 
+"header header"
+"content sidebar"
+"footer footer";
+grid-template-columns: 3fr 1fr;
+background-color: #EFEFEF;
+}
+header {
+grid-area: header;
+background-color:#ffff;
+border-bottom: 3px solid #BFBFBF;
+}
+article {
+grid-area: content;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: minmax(200px, auto);
+}
+aside {
+grid-template-rows: 30px 30px;
+grid-template-columns: 1fr;
+padding: 30px;
+grid-row-gap: 1em;
+}
+
+
+footer {
+padding-bottom: 30px;
+}
+}
+
+@media only screen and (max-width:700px) {
+body{
+background: black;
+}
+.container {
+grid-template-areas: 
+"header"
+"sidebar"
+"content"
+"footer";
+grid-template-columns: 1fr;
+background-color: white;
+}
+header {
+grid-area: header;
+border-bottom: 3px solid #BFBFBF;
+text-align: center;
+background-color: #333333;
+color: #EFEFEF;
+padding: 10px;
+}
+article {
+grid-area: content;
+grid-auto-rows: minmax(50px, auto);
+display: grid;
+padding: 0px 20px;
+row-gap: 0.1em;
+font-size: 20px;
+font-weight: 600;
+}
+
+.card{
+color: #000000;
+background-color: #EFEFEF;
+padding: 15px;
+text-align: center;
+}
+article :nth-child(even) {
+border-left: 6px solid #2B8EAD;
+}
+article :nth-child(odd) {
+border-left: 6px solid #2F454E;
+}
+article :nth-child(7n+1) {
+border-left: 6px solid #6F98A8;
+}
+article :nth-child(n+6):nth-child(-n+7) {
+border-left: 6px solid #BFBFBF;
+}
+}
